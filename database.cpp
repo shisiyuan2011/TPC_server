@@ -6,6 +6,7 @@ database::database(QString connectionname, QObject *parent) : QObject(parent)
     coName = connectionname;
     folder = new QDir;
     path = folder->absolutePath() + "/database";
+    qDebug()<<"database path is"<<path;
     if(!folder->exists(path))
     {
         if(!folder->mkdir(path))
