@@ -69,7 +69,8 @@ void Widget::handledata(int threadid, int sockdesc, const QByteArray &a){
             ui->No1_plot->replot();
             ++plot1;
         }else{
-
+            ui->No1_plot->graph(0)->data().data()->clear();
+            ui->No1_plot->replot();
         }
         //qDebug()<<getdata.curforce;
         ui->lcd_speed_1->display(QString::number(getdata.curspeed));
@@ -84,7 +85,8 @@ void Widget::handledata(int threadid, int sockdesc, const QByteArray &a){
             ui->No2_plot->replot();
             ++plot2;
         }else{
-
+            ui->No2_plot->graph(0)->data().data()->clear();
+            ui->No2_plot->replot();
         }
         ui->lcd_speed_2->display(QString::number(getdata.curspeed));
         ui->lcdcir_2->display(QString::number(getdata.curcir));
@@ -98,7 +100,8 @@ void Widget::handledata(int threadid, int sockdesc, const QByteArray &a){
             ui->No3_plot->replot();
             ++plot3;
         }else{
-
+            ui->No3_plot->graph(0)->data().data()->clear();
+            ui->No3_plot->replot();
         }
         ui->lcd_speed_3->display(QString::number(getdata.curspeed));
         ui->lcdcir_3->display(QString::number(getdata.curcir));
@@ -112,7 +115,8 @@ void Widget::handledata(int threadid, int sockdesc, const QByteArray &a){
             ui->No4_plot->replot();
             ++plot4;
         }else{
-
+            ui->No4_plot->graph(0)->data().data()->clear();
+            ui->No4_plot->replot();
         }
         ui->lcd_speed_4->display(QString::number(getdata.curspeed));
         ui->lcdcir_4->display(QString::number(getdata.curcir));
